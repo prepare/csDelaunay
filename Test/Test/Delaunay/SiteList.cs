@@ -1,5 +1,6 @@
 ﻿//MIT, 2017, WinterDev
 //MIT, 2014, PouletFrit
+//MIT, 2009, Alan Shaw
 using System;
 using System.Collections.Generic;
 

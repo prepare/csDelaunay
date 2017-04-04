@@ -1,6 +1,7 @@
 ﻿//MIT, 2017, WinterDev
 //MIT, 2014, PouletFrit
-using System.Collections;
+//MIT, 2009, Alan Shaw
+ 
 
 namespace CsDelaunay
 {

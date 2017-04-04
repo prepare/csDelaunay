@@ -1,5 +1,6 @@
 ﻿//MIT, 2017, WinterDev
 //MIT, 2014, PouletFrit
+//MIT, 2009, Alan Shaw
 using System;
 
 // Recreation of the UnityEngine.Vector3, so it can be used in other thread
