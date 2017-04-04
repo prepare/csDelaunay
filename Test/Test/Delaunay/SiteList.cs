@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace csDelaunay
+namespace CsDelaunay
 {
 
     public class SiteList

@@ -2,7 +2,7 @@
 //MIT, 2014, PouletFrit
 using System.Collections.Generic;
 
-namespace csDelaunay
+namespace CsDelaunay
 {
 
     public class Halfedge

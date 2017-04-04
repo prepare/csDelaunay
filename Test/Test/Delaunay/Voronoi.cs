@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace csDelaunay
+namespace CsDelaunay
 {
 
     public class Voronoi
@@ -25,28 +25,7 @@ namespace csDelaunay
 
         private Random weigthDistributor;
 
-        public void Reset()
-        {
-            sites.Dispose();
-            sites = null;
-
-            foreach (Triangle t in triangles)
-            {
-                t.Dispose();
-            }
-            triangles.Clear();
-
-            foreach (Edge e in edges)
-            {
-                e.Dispose();
-            }
-            edges.Clear();
-
-            plotBounds = Rectf.zero;
-            sitesIndexedByLocation.Clear();
-            sitesIndexedByLocation = null;
-        }
-
+      
         public Voronoi(List<Vector2f> points, Rectf plotBounds)
         {
             weigthDistributor = new Random();
@@ -178,6 +157,27 @@ namespace csDelaunay
         public List<Vector2f> SiteCoords()
         {
             return sites.SiteCoords();
+        }
+        public void Reset()
+        {
+            sites.Dispose();
+            sites = null;
+
+            foreach (Triangle t in triangles)
+            {
+                t.Dispose();
+            }
+            triangles.Clear();
+
+            foreach (Edge e in edges)
+            {
+                e.Dispose();
+            }
+            edges.Clear();
+
+            plotBounds = Rectf.zero;
+            sitesIndexedByLocation.Clear();
+            sitesIndexedByLocation = null;
         }
 
         private void FortunesAlgorithm()

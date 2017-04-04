@@ -2,7 +2,7 @@
 //MIT, 2014, PouletFrit
 using System.Collections;
 
-namespace csDelaunay
+namespace CsDelaunay
 {
     public class Circle
     {
