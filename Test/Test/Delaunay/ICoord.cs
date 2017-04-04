@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿//MIT, 2017, WinterDev
+//MIT, 2014, PouletFrit
+namespace csDelaunay
+{
+    public interface ICoord
+    {
 
-namespace csDelaunay {
-	public interface ICoord {
-
-		Vector2f Coord {get;set;}
-	}
+        Vector2f Coord { get; set; }
+    }
 }

@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿//MIT, 2017, WinterDev
+//MIT, 2014, PouletFrit
+using System;
 using System.Collections.Generic;
 
 namespace csDelaunay
@@ -10,7 +11,7 @@ namespace csDelaunay
 
         public static readonly Vertex VERTEX_AT_INFINITY = new Vertex(float.NaN, float.NaN);
 
-        #region Pool
+
         private static Queue<Vertex> pool = new Queue<Vertex>();
 
         private static int nVertices = 0;
@@ -30,9 +31,9 @@ namespace csDelaunay
                 return new Vertex(x, y);
             }
         }
-        #endregion
 
-        #region Object
+
+
         private Vector2f coord;
         public Vector2f Coord { get { return coord; } set { coord = value; } }
 
@@ -125,6 +126,6 @@ namespace csDelaunay
 
             return Vertex.Create(intersectionX, intersectionY);
         }
-        #endregion
+
     }
 }
