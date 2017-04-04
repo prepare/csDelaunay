@@ -27,8 +27,8 @@ namespace csDelaunay
 
         public static float CompareLengths_MAX(LineSegment segment0, LineSegment segment1)
         {
-            float length0 = (segment0.p0 - segment0.p1).magnitude;
-            float length1 = (segment1.p0 - segment1.p1).magnitude;
+            float length0 = (segment0.p0 - segment0.p1).Magnitude;
+            float length1 = (segment1.p0 - segment1.p1).Magnitude;
             if (length0 < length1)
             {
                 return 1;

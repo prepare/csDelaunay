@@ -89,7 +89,7 @@ namespace csDelaunay
         private const float EPSILON = 0.005f;
         private static bool CloseEnough(Vector2f p0, Vector2f p1)
         {
-            return (p0 - p1).magnitude < EPSILON;
+            return (p0 - p1).Magnitude < EPSILON;
         }
 
         private int siteIndex;
@@ -429,7 +429,7 @@ namespace csDelaunay
 
         public float Dist(ICoord p)
         {
-            return (this.Coord - p.Coord).magnitude;
+            return (this.Coord - p.Coord).Magnitude;
         }
     }
 

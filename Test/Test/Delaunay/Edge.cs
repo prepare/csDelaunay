@@ -132,7 +132,7 @@ namespace csDelaunay
 
         public float SitesDistance()
         {
-            return (LeftSite.Coord - RightSite.Coord).magnitude;
+            return (LeftSite.Coord - RightSite.Coord).Magnitude;
         }
 
         public static int CompareSitesDistances_MAX(Edge edge0, Edge edge1)
