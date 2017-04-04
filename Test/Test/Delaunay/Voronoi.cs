@@ -360,7 +360,9 @@ namespace csDelaunay
                         continue;
                     }
 
-                    Vector2f centroid = Vector2f.zero;
+                    //Vector2f centroid = Vector2f.zero;
+                    float centroid_x = 0;
+                    float centroid_y = 0;
                     float signedArea = 0;
                     float x0 = 0;
                     float y0 = 0;
@@ -376,8 +378,8 @@ namespace csDelaunay
                         y1 = region[j + 1].y;
                         a = x0 * y1 - x1 * y0;
                         signedArea += a;
-                        centroid.x += (x0 + x1) * a;
-                        centroid.y += (y0 + y1) * a;
+                        centroid_x += (x0 + x1) * a;
+                        centroid_y += (y0 + y1) * a;
                     }
                     // Do last vertex
                     x0 = region[region.Count - 1].x;
@@ -386,14 +388,14 @@ namespace csDelaunay
                     y1 = region[0].y;
                     a = x0 * y1 - x1 * y0;
                     signedArea += a;
-                    centroid.x += (x0 + x1) * a;
-                    centroid.y += (y0 + y1) * a;
+                    centroid_x += (x0 + x1) * a;
+                    centroid_y += (y0 + y1) * a;
 
                     signedArea *= 0.5f;
-                    centroid.x /= (6 * signedArea);
-                    centroid.y /= (6 * signedArea);
+                    centroid_x /= (6 * signedArea);
+                    centroid_y /= (6 * signedArea);
                     // Move site to the centroid of its Voronoi cell
-                    newPoints.Add(centroid);
+                    newPoints.Add(new Vector2f(centroid_x, centroid_y));
                     site = sites.Next();
                 }
 

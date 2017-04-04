@@ -6,7 +6,7 @@ using System;
 public struct Vector2f
 {
 
-    public float x, y;
+    public readonly float x, y;
 
     public static readonly Vector2f zero = new Vector2f(0, 0);
     public static readonly Vector2f one = new Vector2f(1, 1);
@@ -28,7 +28,7 @@ public struct Vector2f
         this.y = (float)y;
     }
 
-    public float magnitude
+    public float Magnitude
     {
         get
         {
@@ -36,16 +36,16 @@ public struct Vector2f
         }
     }
 
-    public void Normalize()
-    {
-        float magnitude = this.magnitude;
-        x /= magnitude;
-        y /= magnitude;
-    }
+    //public void Normalize()
+    //{
+    //    float magnitude = this.Magnitude;
+    //    x /= magnitude;
+    //    y /= magnitude;
+    //}
 
     public static Vector2f Normalize(Vector2f a)
     {
-        float magnitude = a.magnitude;
+        float magnitude = a.Magnitude;
         return new Vector2f(a.x / magnitude, a.y / magnitude);
     }
 
