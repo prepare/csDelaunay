@@ -11,7 +11,7 @@ namespace CsDelaunay
 
         private string name;
 
-        public LR(string name)
+        private LR(string name)
         {
             this.name = name;
         }

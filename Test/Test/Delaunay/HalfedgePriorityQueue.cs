@@ -58,7 +58,8 @@ namespace CsDelaunay
             }
             previous = hash[insertionBucket];
             while ((next = previous.nextInPriorityQueue) != null &&
-                   (halfedge.ystar > next.ystar || (halfedge.ystar == next.ystar && halfedge.vertex.x > next.vertex.x)))
+                   (halfedge.ystar > next.ystar || 
+                   (halfedge.ystar == next.ystar && halfedge.vertex.x > next.vertex.x)))
             {
                 previous = next;
             }

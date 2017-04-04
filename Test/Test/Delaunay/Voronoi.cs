@@ -62,7 +62,7 @@ namespace CsDelaunay
         private void AddSite(Vector2f p, int index)
         {
             float weigth = (float)weigthDistributor.NextDouble() * 100;
-            Site site = Site.Create(p, index, weigth);
+            Site site = Site.GetFreeOne(p, index, weigth);
             sites.Add(site);
             sitesIndexedByLocation[p] = site;
         }

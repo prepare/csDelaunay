@@ -195,13 +195,13 @@ namespace CsDelaunay
             pool.Enqueue(this);
         }
 
-        public Edge()
+        private Edge()
         {
             edgeIndex = nEdges++;
             Init();
         }
 
-        public Edge Init()
+        Edge Init()
         {
             sites = new Dictionary<LR, Site>();
 

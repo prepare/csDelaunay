@@ -96,7 +96,6 @@ namespace Test
             int j = lineSegs.Count;
             for (int i = 0; i < j; ++i)
             {
-
                 LineSegment lineseg = lineSegs[i];
                 path2.AddLine(
                 ToPointF(lineseg.p0),

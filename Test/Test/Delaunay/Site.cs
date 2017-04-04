@@ -8,13 +8,13 @@ namespace CsDelaunay
     public class Site : ICoord
     {
 
-        private static Queue<Site> pool = new Queue<Site>();
+        static Queue<Site> s_pool = new Queue<Site>();
 
-        public static Site Create(Vector2f p, int index, float weigth)
+        public static Site GetFreeOne(Vector2f p, int index, float weigth)
         {
-            if (pool.Count > 0)
+            if (s_pool.Count > 0)
             {
-                return pool.Dequeue().Init(p, index, weigth);
+                return s_pool.Dequeue().Init(p, index, weigth);
             }
             else
             {
@@ -86,7 +86,7 @@ namespace CsDelaunay
             return returnValue;
         }
 
-        private const float EPSILON = 0.005f;
+        const float EPSILON = 0.005f;
         private static bool CloseEnough(Vector2f p0, Vector2f p1)
         {
             return (p0 - p1).Magnitude < EPSILON;
@@ -112,7 +112,7 @@ namespace CsDelaunay
         // ordered list of points that define the region clipped to bounds:
         private List<Vector2f> region;
 
-        public Site(Vector2f p, int index, float weigth)
+        private Site(Vector2f p, int index, float weigth)
         {
             Init(p, index, weigth);
         }
@@ -142,7 +142,7 @@ namespace CsDelaunay
         public void Dispose()
         {
             Clear();
-            pool.Enqueue(this);
+            s_pool.Enqueue(this);
         }
 
         private void Clear()
