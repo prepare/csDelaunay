@@ -70,17 +70,20 @@ namespace Test
             g.Clear(Color.White);
 
             List<Vector2f> vecs = new List<Vector2f>();
-            vecs.Add(new Vector2f(0, 0));
+            vecs.Add(new Vector2f(20, 20));
             //vecs.Add(new Vector2f(50, 0));
             //vecs.Add(new Vector2f(70, 100));
             //vecs.Add(new Vector2f(100, 150));
             //vecs.Add(new Vector2f(30, 150));
             //vecs.Add(new Vector2f(0, 0));
-            vecs.Add(new Vector2f(50, 0));
-            vecs.Add(new Vector2f(50, 80));
-            vecs.Add(new Vector2f(25, 100));
-            vecs.Add(new Vector2f(0, 80));
-            vecs.Add(new Vector2f(0, 0));
+            vecs.Add(new Vector2f(40, 20));
+            vecs.Add(new Vector2f(40, 60));
+            vecs.Add(new Vector2f(20, 60));
+            vecs.Add(new Vector2f(20, 20));
+            //            vecs.Add(new Vector2f(0, 0));
+            //vecs.Add(new Vector2f(25, 100));
+            //vecs.Add(new Vector2f(0, 80));
+            //vecs.Add(new Vector2f(0, 0));
 
             //
             GraphicsPath path = new GraphicsPath();
@@ -98,8 +101,8 @@ namespace Test
             {
                 LineSegment lineseg = lineSegs[i];
                 path2.AddLine(
-                ToPointF(lineseg.p0),
-                ToPointF(lineseg.p1));
+                    ToPointF(lineseg.p0),
+                    ToPointF(lineseg.p1));
             }
             //List<Edge> edgeList = v1.Edges;
             //GraphicsPath path2 = new GraphicsPath();
