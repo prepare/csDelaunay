@@ -25,7 +25,7 @@ namespace csDelaunay
 
         private Random weigthDistributor;
 
-        public void Dispose()
+        public void Reset()
         {
             sites.Dispose();
             sites = null;
@@ -402,7 +402,7 @@ namespace csDelaunay
                 // Between each replacement of the cendroid of the cell,
                 // we need to recompute Voronoi diagram:
                 Rectf origPlotBounds = this.plotBounds;
-                Dispose();
+                Reset();
                 Init(newPoints, origPlotBounds);
             }
         }

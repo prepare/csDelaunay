@@ -34,6 +34,7 @@ namespace Test
             {
                 path.AddLine(ToPointF(vecs[i - 1]), ToPointF(vecs[i]));
             }
+            path.CloseFigure();
         }
         static PointF ToPointF(Vector2f v)
         {
@@ -76,8 +77,9 @@ namespace Test
             //vecs.Add(new Vector2f(30, 150));
             //vecs.Add(new Vector2f(0, 0));
             vecs.Add(new Vector2f(50, 0));
-            vecs.Add(new Vector2f(50, 100));
-            vecs.Add(new Vector2f(0, 100));             
+            vecs.Add(new Vector2f(50, 80));
+            vecs.Add(new Vector2f(25, 100));
+            vecs.Add(new Vector2f(0, 80));
             vecs.Add(new Vector2f(0, 0));
 
             //
@@ -86,7 +88,7 @@ namespace Test
 
             g.DrawPath(Pens.Black, path);
 
-            Voronoi v1 = new Voronoi(vecs, new Rectf(0, 0, 120, 170));
+            Voronoi v1 = new Voronoi(vecs, new Rectf(0, 0, 51, 101));
             List<LineSegment> lineSegs = v1.VoronoiDiagram();
 
             //draw
